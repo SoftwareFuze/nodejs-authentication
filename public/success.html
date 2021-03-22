@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>success!</title>
+</head>
+<body>
+    <h1></h1>
+    <h4>Success!</h4>
+
+    <script>
+        const authToken = document.location.href.split("?")[1].substring(10, document.location.href.split("?")[1].length);
+
+        function ToString(hex) {
+            var hex = hex.toString();
+            var str = '';
+            for (var i = 0; i < hex.length; i += 2)
+                str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+            return str;
+        }
+
+        fetch("/getUser", {
+            'method': 'POST',
+            'headers': {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + ToString(authToken)
+            },
+            'body': ''
+        }).then(res => res.json())
+            .then(res => {
+                if (res.status == 200) {
+                    document.querySelector("h1").innerHTML = "Welcome, " + res.data.user.name + "!";
+                    document.querySelector("h4").innerHTML = res.message;
+                } else {
+                    document.location.href = "index.html";
+                }
+            })
+            .catch(e => {
+                console.log('lol wrong auth token');
+            });
+    </script>
+</body>
+</html>

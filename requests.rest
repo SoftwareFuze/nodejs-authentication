@@ -1,0 +1,16 @@
+GET http://localhost:5000/api
+
+###
+
+POST http://localhost:5000/api/login
+Content-Type: application/json
+
+{
+    "name": "sharky",
+    "pass": "sharky_es_muy_legit===6536l^d"
+}
+
+###
+
+POST http://localhost:5000/api/protected
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiOiJzaGFya3kiLCJwYXNzIjoic2hhcmt5X2VzX211eV9sZWdpdD09PTY1MzZsXmQifSwiaWF0IjoxNjE2MzgyNDU2fQ.XlosbDl7sMwr9OL693AUZhFnEMf1RLy38PNHJfcVc24
