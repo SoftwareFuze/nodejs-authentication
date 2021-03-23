@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+    outline: none;
+    transition: box-shadow .2s;
+}
+a {
+    font-size: 2em;
+    position: relative;
+    text-transform: capitalize;
+    margin: .4em;
+}
+div > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: row !important;
+    align-items: center;
+    margin-top: 2em;
+    box-shadow: 0 3px 6px 2px #00000050;
+    border-radius: 8px;
+    padding: 1em .6em;
+}
+div > div:hover {
+    box-shadow: 0 2px 6px 1px #00000050;
+}

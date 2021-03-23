@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 app.get('/api', (req, res) => {
-    res.send('Welcome to the api!');
+    res.json({ message: 'Welcome to the api!' });
 });
 
 app.post('/api/login', (req, res) => {

@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+body { 
+    background: #fff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1 {
+    margin-top: 1.2em;
+    padding: .4em;
+    text-align: center;
+}
+a {
+    font-size: 1.2em;
+    color: #0069ad;
+    cursor: pointer;
+}
+button {
+    font-size: 1.3em;
+    padding: .3em .6em;
+    border: none;
+    background: #0069ad;
+    cursor: pointer;
+    color: #fff;
+}
+input {
+    font-size: 1.3em;
+    border: none;
+    cursor: text;
+    margin: .1em;
+}
